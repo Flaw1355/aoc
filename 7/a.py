@@ -1,7 +1,6 @@
 from pathlib import Path
 import datetime
 
-# 248909434
 def f_1() -> int:
     cards = {"A":14,"K":13,"Q":12,"J":11,"T":10}
     hc = []
@@ -101,7 +100,7 @@ def f_2() -> int:
                 kind_4 += 1
             elif c_dict[i] == 5:
                 kind_5 += 1
-            elif pairs > 0 and kind_3 > 0:
+            if pairs > 0 and kind_3 > 0:
                 full_house += 1
         
         if kind_5 > 0:
