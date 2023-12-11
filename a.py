@@ -37,9 +37,9 @@ def f_1() -> int:
                 kind_4 += 1
             elif c_dict[i] == 5:
                 kind_5 += 1
-            elif pairs > 0 and kind_3 > 0:
+            if pairs > 0 and kind_3 > 0:
                 full_house += 1
-        
+
         if kind_5 > 0:
             kind5.append(hand)
         elif kind_4 > 0:
@@ -145,8 +145,8 @@ def largest_dict_add_jokers(dict) -> None:
 def value(s, hands_dict, rank, value, vl):
     for i in s:
         rank += 1
-        #print(f"Rank: {rank} - {i}, {vl}")
         value += hands_dict[str(i)] * rank
+        print(f"Rank: {rank} - {i}, {vl} - value: {rank} * {hands_dict[str(i)]}")
     return rank, value
 
 if __name__ == "__main__":
