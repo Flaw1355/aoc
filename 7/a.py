@@ -93,9 +93,11 @@ def f_2() -> int:
         kind_5 = 0
         for i in c_dict:
             if c_dict[i] == 2:
-                pairs += 1
+                if i != "J":
+                    pairs += 1
             elif c_dict[i] == 3:
-                kind_3 += 1
+                if i != "J":
+                    kind_3 += 1
             elif c_dict[i] == 4:
                 kind_4 += 1
             elif c_dict[i] == 5:
